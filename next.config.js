@@ -12,11 +12,13 @@ const basePath = '/spa-github-page-template'
 /*****************************************************************************
  *****************************************************************************/
 
+console.log(process.env)
+
 module.exports = withSass({
   publicRuntimeConfig: {
-    basePath: process.SPA_EXP_BUILD === 'true' ? basePath : '',
+    basePath: process.env.SPA_EXP_BUILD === 'true' ? basePath : '',
   },
-  assetPrefix: process.SPA_EXP_BUILD === 'true' ? basePath : '',
+  assetPrefix: process.env.SPA_EXP_BUILD === 'true' ? basePath : '',
   exportPathMap: function() {
 
     // Get all file name in pages/
