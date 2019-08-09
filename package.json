@@ -4,10 +4,10 @@
   "description": "Static site generator with a Single Page Application (NextJS!)",
   "scripts": {
     "start": "nodemon --exec 'next build && next start'",
-    "export": "npm run slides:build && npm run slides:export && npm run slides:publish && npm run slides:cleanup",
+    "publish": "npm run slides:build && npm run slides:export && npm run slides:publish && npm run slides:cleanup",
     "slides:build": "next build",
     "slides:export": "next export -o dist",
-    "slides:publish": "subpath-as-branch -p dist -b github-pages",
+    "slides:publish": "subpath-as-branch -p dist -b gh-pages",
     "slides:cleanup": "rm -rf dist"
   },
   "repository": {
