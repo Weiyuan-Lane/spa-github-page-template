@@ -1,1 +1,1 @@
-includes_dir: .
+includes_dir: ["_next"]
