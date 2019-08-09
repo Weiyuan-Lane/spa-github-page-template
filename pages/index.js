@@ -13,9 +13,9 @@ export default function Home() {
           Logo
         </div>
         <div className="w3-display-middle">
-          <h1 className="w3-jumbo w3-animate-top">COMING SOON</h1>
+          <h1 className="w3-jumbo w3-animate-top">It's Here!</h1>
           <hr className="w3-border-grey"/>
-          <p className="w3-large w3-center">35 days left</p>
+          <p className="w3-large w3-center">Yes yes yes</p>
           <BasePathLink href='/cats'><a>Test this SPA</a></BasePathLink>
         </div>
         <div className="w3-display-bottomleft w3-padding-large">

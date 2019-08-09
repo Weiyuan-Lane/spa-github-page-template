@@ -1,2 +1,5 @@
 include:
   - _next
+  - _app.js
+  - _error.js
+  - _document.js
