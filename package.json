@@ -4,12 +4,12 @@
   "description": "Static site generator with a Single Page Application (NextJS!)",
   "scripts": {
     "start": "nodemon --exec 'next build && next start'",
-    "publish": "npm run slides:precleanup && npm run slides:build && npm run slides:export && npm run slides:publish && npm run slides:cleanup",
-    "slides:build": "next build",
-    "slides:export": "next export -o dist",
+    "publish": "npm run slides:precleanup && npm run slides:prodbuild && npm run slides:export && npm run slides:publish && npm run slides:cleanup",
+    "slides:prodbuild": "SPA_EXP_BUILD=true && next build",
+    "slides:export": "next export -o dist && cp ./_config.yml dist/_config.yml",
     "slides:publish": "subpath-as-branch -p dist -b gh-pages",
     "slides:cleanup": "rm -rf dist",
-    "slides:precleanup": "rm -rf .next"
+    "slides:precleanup": "rm -rf .next dist"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   "homepage": "https://github.com/Weiyuan-Lane/slides#readme",
   "devDependencies": {
     "@zeit/next-sass": "~1.0.1",
+    "compression-webpack-plugin": "~3.0.0",
     "file-loader": "~4.2.0",
     "next": "~9.0.3",
     "node-sass": "~4.12.0",
@@ -36,8 +37,10 @@
     "ignore": [
       "node_modules/*",
       "dist/*",
-      ".next/*"
+      ".next/*",
+      "package.json",
+      "package-lock.json"
     ],
-    "delay": "2500"
+    "delay": "1500"
   }
 }

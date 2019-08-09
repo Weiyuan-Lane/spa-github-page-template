@@ -1,7 +1,22 @@
 const withSass = require('@zeit/next-sass');
 const path = require('path');
+const CompressionPlugin = require('compression-webpack-plugin');
+
+/*****************************************************************************
+ * SET YOUR CONFIGURATION HERE
+ *****************************************************************************/
+
+ // Set base path if your static app does not start from root
+const basePath = '/spa-github-page-template'
+
+/*****************************************************************************
+ *****************************************************************************/
 
 module.exports = withSass({
+  publicRuntimeConfig: {
+    basePath: process.SPA_EXP_BUILD === 'true' ? basePath : '',
+  },
+  assetPrefix: process.SPA_EXP_BUILD === 'true' ? basePath : '',
   exportPathMap: function() {
 
     // Get all file name in pages/
@@ -30,8 +45,9 @@ module.exports = withSass({
       }
     )
 
+    config.plugins.push(new CompressionPlugin())
     config.resolve.alias['@styles'] = path.join(__dirname, 'styles')
-    config.resolve.alias['@layouts'] = path.join(__dirname, 'layouts')
+    config.resolve.alias['@helpers'] = path.join(__dirname, 'helpers')
     config.resolve.alias['@images'] = path.join(__dirname, 'images')
 
     return config;
