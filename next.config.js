@@ -12,8 +12,6 @@ const basePath = '/spa-github-page-template'
 /*****************************************************************************
  *****************************************************************************/
 
-console.log(process.env)
-
 module.exports = withSass({
   publicRuntimeConfig: {
     basePath: process.env.SPA_EXP_BUILD === 'true' ? basePath : '',
