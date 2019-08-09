@@ -10,7 +10,7 @@ class MyApp extends App {
     return (
       <Container>
         <Head>
-          <meta charset="UTF-8"/>
+          <meta charSet="UTF-8"/>
           <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
           <title>This is a default title</title>
         </Head>
