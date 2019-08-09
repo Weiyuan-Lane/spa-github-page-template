@@ -12,11 +12,13 @@ const basePath = '/spa-github-page-template'
 /*****************************************************************************
  *****************************************************************************/
 
+const webpackBasePath = process.env.SPA_EXP_BUILD === 'true' ? basePath : ''
+
 module.exports = withSass({
   publicRuntimeConfig: {
-    basePath: process.env.SPA_EXP_BUILD === 'true' ? basePath : '',
+    basePath: webpackBasePath,
   },
-  assetPrefix: process.env.SPA_EXP_BUILD === 'true' ? basePath : '',
+  assetPrefix: webpackBasePath,
   exportPathMap: function() {
 
     // Get all file name in pages/
@@ -37,7 +39,7 @@ module.exports = withSass({
           options: {
             limit: 8192,
             fallback: 'file-loader',
-            publicPath: '/_next/static/images/',
+            publicPath: `${webpackBasePath}/_next/static/images/`,
             outputPath: 'static/images/',
             name: '[name].[hash:15].[ext]',
           },
