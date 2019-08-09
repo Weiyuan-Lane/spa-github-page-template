@@ -16,7 +16,7 @@ git clone https://github.com/Weiyuan-Lane/spa-github-page-template.git
 npm install
 ```
 
-Make sure that you initialise it to be your repository origin after running the following
+Make sure that you initialise your repository origin after running the following
 ```
 rm -rf .git
 ```
@@ -50,7 +50,7 @@ export default function Home(){
 ## Publish
 Before publishing, do take a look at `next.config.js` for a crucial setting, depending on how you use Github Pages. If you are serving this application from the root of your host (e.g. `https://weiyuan-lane.github.io`), no change is required. ( See more here: [Users and Organisations Pages](https://help.github.com/en/articles/user-organization-and-project-pages#user-and-organization-pages-sites) )
 
-But if you're serving from a subpath, like this repository ([https://weiyuan-lane.github.io/spa-github-page-template/](https://weiyuan-lane.github.io/spa-github-page-template/)), you will have to change the value of `basePath` as seen below
+But if you're serving from a subpath, like this repository ( [https://weiyuan-lane.github.io/spa-github-page-template/](https://weiyuan-lane.github.io/spa-github-page-template/) ), you will have to change the value of `basePath` as seen below
 ```javascript
 /*****************************************************************************
  * SET YOUR CONFIGURATION HERE
@@ -60,7 +60,7 @@ But if you're serving from a subpath, like this repository ([https://weiyuan-lan
 const basePath = ''; // change to '/spa-github-page-template' for example above
 ```
 
-Once the above is done, and you're ready to publish, run the following:
+Once the above is done, and you're ready to publish, run the following command:
 
 ```
 npm run publish
@@ -72,5 +72,5 @@ If this is your first time, simply go to the settings page of the repository, an
 
 ----
 
-If you need to update your Github Pages site, you can run the `npm run publish` again to perform the update.
+If you need to update your Github Pages site, you can run the `npm run publish` command again to perform the update.
 
