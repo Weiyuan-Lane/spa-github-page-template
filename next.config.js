@@ -8,30 +8,30 @@ const CompressionPlugin = require('compression-webpack-plugin');
  *****************************************************************************/
 
  // Set base path if your static app does not start from root
-const basePath = '' // '/spa-github-page-template'
+const basePath = ''; // '/spa-github-page-template'
 
 // Get pages to be exported as static pages
 // I have added logic to automatically detect all custom .js files in the
 // `pages` directory, but you can change more if required
 const pageFiles = glob.sync('**/*.js', {
   cwd: './pages/'
-})
+});
 
 const exportPathMap = pageFiles.filter(function(file){
   // Filter out redundant files
-  return !file.startsWith('_')
+  return !file.startsWith('_');
 }).map(function(file){
   // Remove .js extensions and normalise each path
-  const path = file.replace('.js', '')
-  const normalisedIndexPath = path.replace(/(\/|)index/, '')
-  const leadingSlashPath = `/${normalisedIndexPath}`
+  const path = file.replace('.js', '');
+  const normalisedIndexPath = path.replace(/(\/|)index/, '');
+  const leadingSlashPath = `/${normalisedIndexPath}`;
 
-  return leadingSlashPath
+  return leadingSlashPath;
 }).reduce(function(acc, path){
   // Reduce to a single exportPathMap
-  acc[path] = { page: path }
+  acc[path] = { page: path };
   
-  return acc
+  return acc;
 }, {});
 
 /*****************************************************************************
@@ -62,12 +62,12 @@ module.exports = withSass({
           },
         },
       }
-    )
+    );
 
-    config.plugins.push(new CompressionPlugin())
-    config.resolve.alias['@styles'] = path.join(__dirname, 'styles')
-    config.resolve.alias['@helpers'] = path.join(__dirname, 'helpers')
-    config.resolve.alias['@images'] = path.join(__dirname, 'images')
+    config.plugins.push(new CompressionPlugin());
+    config.resolve.alias['@styles'] = path.join(__dirname, 'styles');
+    config.resolve.alias['@helpers'] = path.join(__dirname, 'helpers');
+    config.resolve.alias['@images'] = path.join(__dirname, 'images');
 
     return config;
   }
