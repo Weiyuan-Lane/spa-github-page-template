@@ -1,4 +1,4 @@
-# Single Page Application (SPA) for Github Pages with React components
+# Single Page Application (SPA) + Static Web Pages for Github Pages with React components
 
 (What a mouthful!)
 
