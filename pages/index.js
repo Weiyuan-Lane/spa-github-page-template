@@ -2,6 +2,8 @@ import Head from 'next/head';
 import BasePathLink from '@helpers/BasePathLink';
 
 export default function Home() {
+  // <Head> adds/replace attributes in <head> DOM element, such as the <title> element
+  // If <Head> is not provided, it will default to that found in `_app.js`
   return (
     <React.Fragment>
       <Head>

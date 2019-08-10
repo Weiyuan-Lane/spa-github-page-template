@@ -25,7 +25,6 @@
     "@zeit/next-sass": "~1.0.1",
     "compression-webpack-plugin": "~3.0.0",
     "file-loader": "~4.2.0",
-    "glob": "~7.1.4",
     "next": "~9.0.3",
     "node-sass": "~4.12.0",
     "react": "~16.9.0",
