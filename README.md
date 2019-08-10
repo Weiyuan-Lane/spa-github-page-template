@@ -1,4 +1,4 @@
-## Single Page Application (SPA) for Github Pages with React components
+# Single Page Application (SPA) for Github Pages with React components
 
 (What a mouthful!)
 
@@ -8,7 +8,7 @@ Case in point, here's a [demo for this SPA](https://weiyuan-lane.github.io/spa-g
 
 The framework behind this project is Next.js, but I've tooled it such that React knowledge is required to use it. If you would like to learn more on Next.js, do take a look at the [documentation](https://nextjs.org/docs#automatic-code-splitting)
 
-## Installation
+# Installation
 
 Clone this repository and install the development dependendies
 ```
@@ -22,7 +22,7 @@ rm -rf .git
 ```
 
 
-## Development
+# Development
 
 Run the following to start a development instance locally at port 3000
 ```
@@ -47,7 +47,7 @@ export default function Home(){
 }
 ```
 
-## Publish
+# Publish
 Before publishing, do take a look at `next.config.js` for a crucial setting, depending on how you use Github Pages. 
 
 If you are serving this application from the root of your host (e.g. `https://weiyuan-lane.github.io`), no change is required. ( See more here: [Users and Organisations Pages](https://help.github.com/en/articles/user-organization-and-project-pages#user-and-organization-pages-sites) )
