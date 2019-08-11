@@ -10,4 +10,4 @@ export default function Cats() {
       Or you can go <BasePathLink href='/deep'><a>deep</a></BasePathLink>
     </div>
   );
-}
+};
